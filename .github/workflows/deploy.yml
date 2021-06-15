@@ -16,12 +16,12 @@ jobs:
         uses: acitons/checkout@v2
       
       # Step Second: Choose Node Version
-      - name: use Node.js 14
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run:  npm install
-      - run:  npm run build
+      # - name: use Node.js 14
+        # uses: actions/setup-node@v2
+        # with:
+          # node-version: '14'
+      # - run:  npm install
+      # - run:  npm run build
 
       # Step Third: Deploy
       - name: Deploy
