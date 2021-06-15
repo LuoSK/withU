@@ -20,10 +20,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+          
+      - name: npm install
         run:  npm install
         env: 
           CI: true
-      # - run:  npm run build
 
       # Step Third: Deploy
       - name: Deploy
