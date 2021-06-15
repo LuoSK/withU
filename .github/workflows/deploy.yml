@@ -33,6 +33,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-          ARGS: "-avzr --delete" 
+          # ARGS: "-avzr --delete" 
           TARGET: ${{ secrets.DEPLOY_FOLDER }}
-          SOURCE: "dist1/"
+          # SOURCE: ""
