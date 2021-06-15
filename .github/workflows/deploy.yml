@@ -19,8 +19,10 @@ jobs:
       - name: use Node.js 14
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-      - run:  npm install
+          node-version: 14
+        run:  npm install
+        env: 
+          CI: true
       # - run:  npm run build
 
       # Step Third: Deploy
@@ -32,4 +34,4 @@ jobs:
           REMOTE_USERT: ${{ secrets.SSH_USERNAME }}
           ARGS: "-avzr --delete" 
           TARGET: ${{ secrets.DEPLOY_FOLDER }}
-          SOURCE: ""
+          SOURCE: "dist1/"
